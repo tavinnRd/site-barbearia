@@ -38,7 +38,7 @@ nav .btn{padding:9px 18px}
 .card{background:#fff;border:1px solid #dde3e8;border-top:5px solid var(--red);border-radius:4px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
 .card h3{font-size:1.4rem}
 .card p{color:#46535f}
-.card .preco{font-family:'Alfa Slab One',Georgia,serif;font-size:2.2rem;color:var(--ink);margin-top:auto}
+.card .preco{font-family:'Work Sans',system-ui,sans-serif;font-weight:600;font-size:1.9rem;color:var(--ink);margin-top:auto}
 .local{background:var(--navy2);color:#fff;padding:84px 0}
 .local-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
 .local p{margin-bottom:20px;color:var(--steel)}
