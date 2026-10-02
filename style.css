@@ -1,0 +1,60 @@
+:root{--navy:#12202e;--navy2:#1b2e40;--red:#c8333b;--blue:#2c5d8f;--paper:#f6f7f5;--steel:#a9bacb;--brass:#c9a45c;--ink:#16212b}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:17px/1.65 'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+h1,h2,h3{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;line-height:1.1}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:32px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1080px;margin:auto;padding:0 22px}
+.btn{display:inline-block;padding:13px 24px;border-radius:4px;background:var(--red);color:#fff;font-weight:600;text-decoration:none;border:2px solid var(--red);transition:background .2s}
+.btn:hover{background:#a8262e;border-color:#a8262e}
+.btn.ghost{background:transparent;border-color:var(--steel);color:inherit}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.top{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Alfa Slab One',Georgia,serif;font-size:1.25rem;text-decoration:none}
+nav{display:flex;align-items:center;gap:26px}
+nav a:not(.btn){text-decoration:none}
+nav a:not(.btn):hover{color:var(--brass)}
+nav .btn{padding:9px 18px}
+.menu{display:none;background:none;border:2px solid var(--steel);color:#fff;padding:6px 14px;border-radius:4px;font:inherit;cursor:pointer}
+.hero{background:var(--navy);color:#fff;padding:72px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4.2rem);margin-bottom:20px}
+.hero p{color:var(--steel);max-width:46ch;margin-bottom:30px;font-size:1.1rem}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.pole-wrap{position:relative;width:96px;margin:auto;padding:20px 0}
+.pole-wrap::before,.pole-wrap::after{content:"";position:absolute;left:-6px;right:-6px;height:22px;background:var(--brass);border-radius:8px}
+.pole-wrap::before{top:0}
+.pole-wrap::after{bottom:0}
+.pole{height:320px;border-radius:6px;overflow:hidden;position:relative;box-shadow:inset 16px 0 20px rgba(255,255,255,.3),inset -16px 0 20px rgba(0,0,0,.35)}
+.pole::before{content:"";position:absolute;inset:-130px 0;z-index:-1;background:repeating-linear-gradient(-45deg,var(--red) 0 22px,#fff 22px 44px,var(--blue) 44px 66px,#fff 66px 88px);animation:gira 3s linear infinite}
+.pole{isolation:isolate}
+@keyframes gira{to{transform:translateY(124.45px)}}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px)}
+.servicos{padding:84px 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border:1px solid #dde3e8;border-top:5px solid var(--red);border-radius:4px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.card h3{font-size:1.4rem}
+.card p{color:#46535f}
+.card .preco{font-family:'Alfa Slab One',Georgia,serif;font-size:2.2rem;color:var(--ink);margin-top:auto}
+.local{background:var(--navy2);color:#fff;padding:84px 0}
+.local-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
+.local p{margin-bottom:20px;color:var(--steel)}
+.local strong{color:#fff}
+.local iframe{width:100%;height:380px;border:0;border-radius:4px}
+footer{background:var(--navy);color:var(--steel);padding:26px 0;font-size:.95rem}
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:30;background:#25d366;color:#0b2a17;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:40px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+@media(max-width:760px){
+.menu{display:block}
+nav{display:none;position:absolute;top:66px;left:0;right:0;background:var(--navy);flex-direction:column;align-items:stretch;padding:18px 22px 24px;gap:16px}
+nav.open{display:flex}
+nav .btn{text-align:center}
+.hero{padding:48px 0 56px}
+.hero-grid,.local-grid{grid-template-columns:1fr}
+.pole-wrap{order:-1;width:64px}
+.pole{height:150px}
+.servicos,.local{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){.pole::before{animation:none}html{scroll-behavior:auto}}
