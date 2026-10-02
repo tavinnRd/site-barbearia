@@ -1,4 +1,4 @@
-const FONE = '5519993546462';
+const FONE = '5519997045058';
 
 // Links do WhatsApp: se o botão tem um serviço, a mensagem já vai pronta.
 document.querySelectorAll('[data-wpp]').forEach(a => {
